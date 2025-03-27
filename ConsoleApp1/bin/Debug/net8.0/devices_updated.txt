@@ -1,0 +1,3 @@
+SW;SW001;Watch1;20
+P;PC001;Office Laptop;Windows 10
+ED;ED001;SensorX;192.168.0.5;MD Ltd. Network
