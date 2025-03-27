@@ -5,10 +5,14 @@
     /// </summary>
     public interface INetworkConnectable
     {
-        /// <summary>Attempts to connect to a network.</summary>
+        /// <summary>
+        /// Attempts to connect the device to a network.
+        /// </summary>
         void Connect();
 
-        /// <summary>Indicates whether the device is connected.</summary>
+        /// <summary>
+        /// Gets a value indicating whether the device is connected.
+        /// </summary>
         bool IsConnected { get; }
     }
 }

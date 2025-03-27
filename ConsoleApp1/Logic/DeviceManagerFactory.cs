@@ -1,5 +1,6 @@
 ﻿using ConsoleApp1.interfaces;
 using ConsoleApp1.Infrastructure;
+using ConsoleApp1.core;
 
 namespace ConsoleApp1.Logic
 {
@@ -11,8 +12,10 @@ namespace ConsoleApp1.Logic
         public static DeviceManager Create(string filePath)
         {
             IDeviceParser parser = new TxtDeviceParser();
-            IDeviceLoader loader = new FileDeviceLoader(parser);
-            return new DeviceManager(loader, filePath);
+            IDeviceStorage storage = new FileDeviceStorage(parser);
+            var devices = storage.LoadDevices(filePath);
+
+            return new DeviceManager(devices);
         }
     }
 }

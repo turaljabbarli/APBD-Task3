@@ -1,4 +1,6 @@
 ﻿using ConsoleApp1.Logic;
+using ConsoleApp1.Infrastructure;
+using ConsoleApp1.interfaces;
 using System;
 using System.IO;
 
@@ -10,14 +12,17 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Working dir: " + Directory.GetCurrentDirectory());
 
-            var manager = DeviceManagerFactory.Create("devices.txt");
+            IDeviceParser parser = new TxtDeviceParser();
+            IDeviceStorage storage = new FileDeviceStorage(parser);
+
+            var manager = new DeviceManager(storage.LoadDevices("devices.txt"));
 
             manager.ShowAllDevices();
 
             manager.TurnOnDevice("SW001");
             manager.EditDevice("PC001", "Office Laptop");
 
-            manager.SaveToFile("devices_updated.txt");
+            storage.SaveDevices("devices_updated.txt", manager.GetAllDevices());
         }
     }
 }

@@ -1,11 +1,13 @@
 ﻿namespace ConsoleApp1.interfaces
 {
     /// <summary>
-    /// Interface for devices that notify about low battery.
+    /// Interface for devices that can notify the user about low battery.
     /// </summary>
     public interface IPowerNotifier
     {
-        /// <summary>Triggers a battery warning notification.</summary>
+        /// <summary>
+        /// Triggers a notification when the battery is low.
+        /// </summary>
         void NotifyLowBattery();
     }
 }

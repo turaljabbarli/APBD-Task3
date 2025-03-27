@@ -1,15 +1,12 @@
 ﻿using ConsoleApp1.core;
-using ConsoleApp1.interfaces;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace ConsoleApp1.Logic
 {
     /// <summary>
-    /// Manages a collection of electronic devices. Supports loading, adding, editing,
-    /// removing, and saving devices to file. Limited to 15 devices.
+    /// Manages a collection of electronic devices. Provides operations such as add, edit, remove, power control, and retrieval.
     /// </summary>
     public class DeviceManager
     {
@@ -17,22 +14,12 @@ namespace ConsoleApp1.Logic
         private readonly List<Device> _devices = new();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeviceManager"/> class and loads devices from the given loader.
+        /// Initializes a new instance of the <see cref="DeviceManager"/> class with an optional collection of devices.
         /// </summary>
-        /// <param name="loader">The device loader implementation.</param>
-        /// <param name="filePath">The path to the file containing devices to load.</param>
-        public DeviceManager(IDeviceLoader loader, string filePath)
+        /// <param name="initialDevices">The initial devices to add.</param>
+        public DeviceManager(IEnumerable<Device> initialDevices)
         {
-            var loadedDevices = loader.LoadDevices(filePath);
-            foreach (var device in loadedDevices)
-            {
-                if (_devices.Count >= MaxDevices)
-                {
-                    Console.WriteLine("Device storage full.");
-                    break;
-                }
-                _devices.Add(device);
-            }
+            _devices.AddRange(initialDevices.Take(MaxDevices));
         }
 
         /// <summary>
@@ -98,23 +85,9 @@ namespace ConsoleApp1.Logic
         }
 
         /// <summary>
-        /// Saves all current devices to a file.
+        /// Returns all currently managed devices.
         /// </summary>
-        /// <param name="path">The file path to save to.</param>
-        public void SaveToFile(string path)
-        {
-            var lines = _devices.Select(d =>
-            {
-                return d switch
-                {
-                    Smartwatch sw => $"SW;{sw.Id};{sw.Name};{sw.BatteryPercentage}",
-                    PersonalComputer pc => $"P;{pc.Id};{pc.Name};{pc.OperatingSystem}",
-                    EmbeddedDevice ed => $"ED;{ed.Id};{ed.Name};{ed.IpAddress};{ed.NetworkName}",
-                    _ => ""
-                };
-            });
-
-            File.WriteAllLines(path, lines);
-        }
+        /// <returns>An enumerable of all devices.</returns>
+        public IEnumerable<Device> GetAllDevices() => _devices;
     }
 }

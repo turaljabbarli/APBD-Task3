@@ -3,15 +3,15 @@
 namespace ConsoleApp1.interfaces
 {
     /// <summary>
-    /// Interface for parsing devices from a line of text.
+    /// Interface for parsing devices from text representations.
     /// </summary>
     public interface IDeviceParser
     {
         /// <summary>
-        /// Parses a device from a string line.
+        /// Parses a device from a line of text.
         /// </summary>
-        /// <param name="line">The input line.</param>
-        /// <returns>A Device object parsed from the line.</returns>
+        /// <param name="line">A text line representing a device.</param>
+        /// <returns>The parsed <see cref="Device"/> object.</returns>
         Device Parse(string line);
     }
 }
