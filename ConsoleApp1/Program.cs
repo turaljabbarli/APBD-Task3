@@ -1,18 +1,23 @@
-﻿using ConsoleApp1.Devices;
+﻿using ConsoleApp1.Logic;
+using System;
+using System.IO;
 
-class Program
+namespace ConsoleApp1
 {
-    static void Main()
+    class Program
     {
-        Console.WriteLine("Working dir: " + Directory.GetCurrentDirectory());
+        static void Main()
+        {
+            Console.WriteLine("Working dir: " + Directory.GetCurrentDirectory());
 
-        var manager = DeviceManagerFactory.Create("devices.txt");
+            var manager = DeviceManagerFactory.Create("devices.txt");
 
-        manager.ShowAllDevices();
+            manager.ShowAllDevices();
 
-        manager.TurnOnDevice("SW001");
-        manager.EditDevice("PC001", "Office Laptop");
+            manager.TurnOnDevice("SW001");
+            manager.EditDevice("PC001", "Office Laptop");
 
-        manager.SaveToFile("devices_updated.txt");
+            manager.SaveToFile("devices_updated.txt");
+        }
     }
 }

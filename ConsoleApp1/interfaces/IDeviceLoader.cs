@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using ConsoleApp1.core;
 
-namespace ConsoleApp1.Devices
+namespace ConsoleApp1.interfaces
 {
     /// <summary>
     /// Interface for classes that load devices from a data source (e.g., file).

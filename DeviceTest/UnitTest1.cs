@@ -1,4 +1,5 @@
-using ConsoleApp1.Devices;
+using ConsoleApp1.core;
+using ConsoleApp1.Exceptions;
 using Xunit;
 
 namespace DeviceTest
@@ -9,10 +10,10 @@ namespace DeviceTest
         public void Smartwatch_ShouldThrowException_WhenBatteryTooLow()
         {
             var watch = new Smartwatch("SW01", "Test Watch", 5);
-            
+
             Assert.Throws<EmptyBatteryException>(() => watch.TurnOn());
         }
-        
+
         [Fact]
         public void Smartwatch_TurnOn_ShouldReduceBatteryBy10()
         {
@@ -22,8 +23,5 @@ namespace DeviceTest
 
             Assert.Equal(40, watch.BatteryPercentage);
         }
-
     }
-    
-    
 }

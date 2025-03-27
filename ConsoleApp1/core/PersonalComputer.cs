@@ -1,5 +1,8 @@
-﻿namespace ConsoleApp1.Devices
+﻿namespace ConsoleApp1.core
 {
+    using ConsoleApp1.Exceptions;
+    using System;
+
     /// <summary>
     /// Represents a personal computer device with an optional operating system.
     /// </summary>

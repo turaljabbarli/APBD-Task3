@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Devices
+﻿namespace ConsoleApp1.core
 {
 /// <summary>
 /// Represents an abstract electronic device with basic properties and power control.

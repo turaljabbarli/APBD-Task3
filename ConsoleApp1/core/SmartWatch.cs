@@ -1,7 +1,9 @@
-﻿using System;
-
-namespace ConsoleApp1.Devices
+﻿namespace ConsoleApp1.core
 {
+    using ConsoleApp1.interfaces;
+    using ConsoleApp1.Exceptions;
+    using System;
+
     /// <summary>
     /// Represents a smartwatch device with battery tracking and low-battery notifications.
     /// </summary>

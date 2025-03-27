@@ -98,6 +98,7 @@ C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\DeviceTes
 C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\DeviceTest.AssemblyInfoInputs.cache
 C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\DeviceTest.AssemblyInfo.cs
 C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\DeviceTest.csproj.CoreCompileInputs.cache
+C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\DeviceTest.sourcelink.json
 C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\DeviceTest.csproj.Up2Date
 C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\DeviceTest.dll
 C:\Users\jabba\RiderProjects\APBD-1-phonix\DeviceTest\obj\Debug\net8.0\refint\DeviceTest.dll

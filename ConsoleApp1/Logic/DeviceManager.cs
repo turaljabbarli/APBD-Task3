@@ -1,9 +1,11 @@
-﻿using System;
+﻿using ConsoleApp1.core;
+using ConsoleApp1.interfaces;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.IO;
+using System.Linq;
 
-namespace ConsoleApp1.Devices
+namespace ConsoleApp1.Logic
 {
     /// <summary>
     /// Manages a collection of electronic devices. Supports loading, adding, editing,

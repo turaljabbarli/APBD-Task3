@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ConsoleApp1.Devices
+﻿namespace ConsoleApp1.Exceptions
 {
     public class ConnectionException : Exception
     {

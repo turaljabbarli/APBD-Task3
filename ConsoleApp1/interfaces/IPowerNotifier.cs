@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Devices
+﻿namespace ConsoleApp1.interfaces
 {
     /// <summary>
     /// Interface for devices that notify about low battery.
