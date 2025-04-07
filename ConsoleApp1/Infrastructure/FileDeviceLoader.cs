@@ -35,7 +35,7 @@ namespace ConsoleApp1.Infrastructure
                 }
                 catch
                 {
-                    // Ignore malformed lines
+                    
                 }
             }
 

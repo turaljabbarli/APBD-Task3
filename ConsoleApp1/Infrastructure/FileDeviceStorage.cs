@@ -30,7 +30,7 @@ namespace ConsoleApp1.Infrastructure
                 }
                 catch
                 {
-                    // optionally log or skip
+                    
                 }
             }
 
